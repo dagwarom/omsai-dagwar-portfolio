@@ -37,6 +37,10 @@ export default function Certifications() {
         <section className="py-16 md:py-24 px-6 lg:px-8">
           <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, i) => (
+              (() => {
+                const isMinistryFinanceLogo = cert.logoUrl?.includes('Ministry_of_Finance_India.svg');
+
+                return (
               <motion.article
                 key={cert.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -59,14 +63,14 @@ export default function Certifications() {
                     whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.07 + 0.15, type: 'spring', stiffness: 180 }}
-                    className="size-14 rounded-sm flex items-center justify-center border border-border bg-background overflow-hidden"
+                    className={`size-14 rounded-sm flex items-center justify-center border border-border overflow-hidden ${isMinistryFinanceLogo ? 'bg-white' : 'bg-background'}`}
                     style={{ boxShadow: `0 0 0 1px ${cert.brandColor}22 inset` }}
                   >
                     {cert.logoUrl ? (
                       <img
                         src={cert.logoUrl}
                         alt={`${cert.issuer} logo`}
-                        className="size-8 object-contain transition-transform duration-500 group-hover:scale-110"
+                        className={`size-9 object-contain transition-transform duration-500 group-hover:scale-110 md:size-10 ${isMinistryFinanceLogo ? 'dark:invert-0' : ''}`}
                         loading="lazy"
                         onError={(e) => {
                           (e.currentTarget as HTMLImageElement).style.display = 'none';
@@ -113,6 +117,8 @@ export default function Certifications() {
                   transition={{ duration: 0.8, delay: i * 0.07 + 0.3 }}
                 />
               </motion.article>
+                );
+              })()
             ))}
           </div>
         </section>
