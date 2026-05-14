@@ -196,16 +196,26 @@ export default function About() {
                     <h3 className="text-2xl md:text-3xl font-light tracking-wide">Open to Roles</h3>
                   </div>
                   <p className="text-sm md:text-base font-light text-muted-foreground">
-                    Currently exploring opportunities both immediate and future across the following areas:
+                    Currently open to opportunities across these focused domains. This is the work I want to be
+                    considered for:
                   </p>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {photographerInfo.openToRoles.map((role) => (
-                      <div
-                        key={role}
-                        className="flex items-center gap-3 p-4 border border-border rounded-sm bg-accent/30"
-                      >
-                        <span className="size-2 rounded-full bg-emerald-500" />
-                        <span className="text-sm md:text-base font-light">{role}</span>
+                  <div className="space-y-4">
+                    {photographerInfo.openToRoles.map((group) => (
+                      <div key={group.category} className="space-y-3 rounded-sm border border-border bg-accent/20 p-4 md:p-5">
+                        <h4 className="text-sm uppercase tracking-[0.28em] text-muted-foreground font-mono">
+                          {group.category}
+                        </h4>
+                        <div className="grid gap-3 sm:grid-cols-2">
+                          {group.items.map((role) => (
+                            <div
+                              key={role}
+                              className="flex items-center gap-3 rounded-sm border border-border/70 bg-background/40 px-4 py-3"
+                            >
+                              <span className="size-2 rounded-full bg-emerald-500" />
+                              <span className="text-sm md:text-base font-light">{role}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </div>

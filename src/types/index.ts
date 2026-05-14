@@ -65,7 +65,10 @@ export interface PhotographerInfo {
   experience?: ExperienceItem[];
   certifications?: string[];
   skills?: { category: string; items: string[] }[];
-  openToRoles?: string[];
+  openToRoles?: {
+    category: string;
+    items: string[];
+  }[];
 }
 
 export interface ContactSubmission {
