@@ -61,7 +61,7 @@ export function ContactForm() {
       {/* Project Type */}
       <div className="space-y-2">
         <label htmlFor="projectType" className="text-sm font-light tracking-wide">
-          Project Type
+          Purpose of Contact
         </label>
         <select
           id="projectType"
@@ -85,7 +85,7 @@ export function ContactForm() {
         <Textarea
           id="message"
           name="message"
-          placeholder="Tell me about your project..."
+          placeholder="Tell me how I can assist you..."
           className="min-h-32 font-light resize-none"
           required
           minLength={10}
