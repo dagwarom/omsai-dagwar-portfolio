@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/omsai-dagwar-portfolio/" : "/",
+  base: "/omsai-dagwar-portfolio/",
   server: {
     host: "::",
     port: 8080,
