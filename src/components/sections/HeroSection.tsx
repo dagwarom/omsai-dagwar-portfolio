@@ -45,12 +45,11 @@ export function HeroSection() {
             {photographerInfo.resumeUrl && (
               <a
                 href={photographerInfo.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Omsai_Dagwar_Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
               >
                 <FileDown className="size-4" />
-                Download Resume
+                Download CV
               </a>
             )}
           </div>

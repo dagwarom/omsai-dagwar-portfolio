@@ -76,8 +76,7 @@ export function Header() {
             {photographerInfo.resumeUrl && (
               <a
                 href={photographerInfo.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Omsai_Dagwar_Resume.pdf"
                 className={cn(
                   'inline-flex items-center gap-2 px-4 py-2 rounded-sm border text-sm font-light tracking-wide transition-colors',
                   isTransparent
@@ -86,7 +85,7 @@ export function Header() {
                 )}
               >
                 <FileDown className="size-4" />
-                Resume
+                Download CV
               </a>
             )}
 
@@ -122,12 +121,11 @@ export function Header() {
                   {photographerInfo.resumeUrl && (
                     <a
                       href={photographerInfo.resumeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      download="Omsai_Dagwar_Resume.pdf"
                       className="inline-flex items-center gap-2 text-lg font-light tracking-wide text-foreground"
                     >
                       <FileDown className="size-5" />
-                      Resume
+                      Download CV
                     </a>
                   )}
                 </nav>

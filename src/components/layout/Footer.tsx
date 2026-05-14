@@ -34,12 +34,11 @@ export function Footer() {
             {photographerInfo.resumeUrl && (
               <a
                 href={photographerInfo.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Omsai_Dagwar_Resume.pdf"
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm font-light"
               >
                 <FileDown className="size-4" />
-                Resume
+                Download CV
               </a>
             )}
           </div>

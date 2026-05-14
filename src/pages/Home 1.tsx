@@ -80,7 +80,7 @@ export default function Home() {
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-sm border border-white/40 text-white text-sm font-light tracking-wide hover:bg-white/10 transition"
                   >
                     <FileDown className="size-4" />
-                    Download Resume
+                    Download CV
                   </a>
                 )}
               </div>

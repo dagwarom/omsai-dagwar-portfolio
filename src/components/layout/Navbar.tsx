@@ -52,8 +52,7 @@ export function Navbar({ isTransparent = false, mobile = false, onNavigate }: Na
       {photographerInfo.resumeUrl && (
         <a
           href={photographerInfo.resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          download="Omsai_Dagwar_Resume.pdf"
           onClick={onNavigate}
           className={cn(
             'inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium tracking-wide transition-colors',
@@ -64,7 +63,7 @@ export function Navbar({ isTransparent = false, mobile = false, onNavigate }: Na
           )}
         >
           <FileDown className="size-4" />
-          Resume
+          Download CV
         </a>
       )}
     </nav>
